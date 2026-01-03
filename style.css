@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'TTlakes';
+    src: url('./font/TTLakes-Medium.woff') format('woff');        
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTlakes';
+    src: url('./font/TTLakes-DemiBold.woff') format('woff');        
+    font-weight: 700;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #e9eef5;
+    font-family: 'TTlakes', sans-serif;
+    font-weight: 500;
+}
+
+.page {
+    width: 768px;
+    height: 1024px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+    16px 0 52px rgba(14, 24, 80, 0.2),
+    -2px 0 4px rgba(69, 79, 126, 0.02);
+}
+
+.content {
+    height: 100%;
+    margin-left: 320px;
+}
+
+.mobile-menu__header {
+    display: flex;
+    align-items: center;
+    padding: 18px 16px;
+}
+
+.mobile-menu__logo {
+    height: 40px;
+    display: block;
+    margin-left: 16px;
+}
+
+.mobile-menu__header .icon-btn:last-child {
+    margin-left: auto;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-btn--pink {
+    background: #ff3e79;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+.mobile-menu__nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu__link {
+    position: relative;
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    text-decoration: none;
+}
+
+
+.mobile-menu__link--active {
+    color: #7e7e82;
+}
+
+.mobile-menu__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 32px;
+    background: #41f6d7;
+    border-radius: 0 4px 4px 0;
+}
+
+.mobile-menu__footer {
+    margin-top: auto;
+    padding: 16px;
+}
+
+.mobile-menu__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.mobile-menu__email {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    text-decoration: none;
+}
+
+.mobile-menu__phone {
+    display:block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    text-decoration: none;
+}
+
+.mobile-menu__lang a {
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    color: #1b1c21;
+}
+
+.mobile-menu__lang .active {
+    color: #7e7e82;
+}
