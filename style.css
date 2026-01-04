@@ -26,20 +26,19 @@ body {
 }
 
 .page {
-    width: 768px;
-    height: 1024px;
+    width: 100%;
+    max-width: 768px;
     margin: 0 auto;
     background: #ffffff;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    height: auto;
 }
 
 .mobile-menu {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 320px;
-    height: 100%;
+    flex: 0 0 320px;
+    min-height: 100vh;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -49,8 +48,7 @@ body {
 }
 
 .content {
-    height: 100%;
-    margin-left: 320px;
+    flex: 1;
 }
 
 .mobile-menu__header {
@@ -174,3 +172,4 @@ body {
 .mobile-menu__lang .active {
     color: #7e7e82;
 }
+
